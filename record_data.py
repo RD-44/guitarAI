@@ -32,14 +32,6 @@ def next_index(label_dir):
     return len(existing) + 1
 
 
-def count_chords(data_dir=DATA_DIR):
-    """Return number of chord labels (directories in data_dir minus 1 for 'N')."""
-    if not os.path.exists(data_dir):
-        return 0
-    dirs = [d for d in os.listdir(data_dir) if os.path.isdir(os.path.join(data_dir, d))]
-    return max(0, len(dirs) - 1)
-
-
 def main():
     print("Guitar chord data recorder")
     print("Type a chord label and hit enter to record a clip for it.")
