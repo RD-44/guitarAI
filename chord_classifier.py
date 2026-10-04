@@ -21,7 +21,7 @@ class ChordClassifier:
 
         self.chord_labels = sorted([
             d for d in os.listdir(self.data_dir)
-            if os.path.isdir(os.path.join(self.data_dir, d))
+            if os.path.isdir(os.path.join(self.data_dir, d)) # want only directories
         ])
 
         X_list = []
