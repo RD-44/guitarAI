@@ -1,0 +1,23 @@
+audio:
+  sample_rate: 22050
+  blocksize: 1024
+  buffer_seconds: 2.0
+
+detector:
+  window_seconds: 1.0
+  hop_seconds: 0.2
+  vote_window: 5
+  confidence_threshold: 0.5
+
+classifier:
+  n_neighbors: 3
+  data_dir: "data"
+
+display:
+  update_interval: 0.1
+  show_confidence: true
+
+logging:
+  enabled: true
+  path: "logs/detect_{timestamp}.jsonl"
+  level: "INFO"
